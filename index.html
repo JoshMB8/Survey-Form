@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+  </head>
+  
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title">TTRPG Survery Form</h1>
+        <p id="description" class="description">Thank you for taking this survey to register your interest</p>
+      </header>
+      <form id="survey-form">
+
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter yout name" required />
+        </div>
+
+        <div class="form-group">
+          <label id="email-label" for="email">Email</label>
+          <input type="email" name="email" id="email" class="form-control" placeholder="Enter yout Email" required />
+        </div>
+
+        <div class="form-group">
+          <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+          <input type="number" name="age" id="number" min="12" max="99" class="form-control" placeholder="Age" />
+        </div>
+
+        <div class="form-group">
+          <p>Which option best describes your current experience with TTRPG's?</p>
+          <select id="dropdown" name="experience" class="form-control" required>
+            <option disabled selected value>Select experience level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="seasoned">Seasoned Player</option>
+            <option value="Expert">Expert</option>
+            <option value="rogue">Oh... I didn't see you there rogue!</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>Would you like to be the GM/ DM?</p>
+          <label>
+            <input name="master-choice" value="yes" type="radio" class="input-radio" checked/>Yes</label>
+          <label>
+            <input name="master-choice" value="no" type="radio" class="input-radio" />No</label>
+          <label>
+            <input name="master-choice" value="what" type="radio" class="input-radio" />What's that?</label>
+        </div>
+
+        <div class="form-group">
+          <p>What made you want to get into TTRPG's</p>
+          <select id="influence" name="influence" class="form-control" required>
+            <option disabled selected value>Select an option</option>
+            <option value="friends">Through Friends</option>
+            <option value="social">Social Media</option>
+            <option value="critrole">Critical Role</option>
+            <option value="other">Other sources/ online</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <p>What days could you play?
+            <span class="clue">(Check all that apply)</span>         
+          </p>
+
+          <label><input name="prefer" value="monday" type="checkbox" class="input-checkbox" />Monday</label>
+        <label><input name="prefer" value="tuesday" type="checkbox" class="input-checkbox" />Tuesday</label>
+      <label><input name="prefer" value="wednesday" type="checkbox" class="input-checkbox" />Wednesday</label>
+    <label><input name="prefer" value="thursday" type="checkbox" class="input-checkbox" />Thursday</label>
+    <label><input name="prefer" value="friday" type="checkbox" class="input-checkbox" />Friday</label>
+    <label><input name="prefer" value="saturday" type="checkbox" class="input-checkbox" />Saturday</label>
+    <label><input name="prefer" value="sunday" type="checkbox" class="input-checkbox" />Sunday</label>
+        </div>
+
+        <div class="form-group">
+          <p>Any comments or information to share?</p>
+          <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">Submit</button>
+        </div>
+
+      </form>
+    </div>
+  </body>
+</html>
